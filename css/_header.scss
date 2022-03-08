@@ -1,0 +1,129 @@
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  max-height: 720px;
+  background: center/cover no-repeat;
+  background-image: url(../images/mobile/image-header.jpg);
+  transition: 1s;
+}
+.header__menu {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  justify-content: space-between;
+}
+.header__content {
+  margin: auto;
+  text-align: center;
+}
+
+.header__title {
+  margin-top: -10rem;
+  text-transform: uppercase;
+  color: var(--White);
+  font-size: 3rem;
+  letter-spacing: 3px;
+  margin-bottom: 2rem;
+}
+.header__image {
+  display: inline-block;
+  animation: up-down 3s infinite;
+}
+@keyframes up-down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+nav {
+  position: absolute;
+  padding: 1rem;
+  background-color: var(--White);
+  width: 80%;
+  left: 10%;
+  text-align: center;
+  top: 15%;
+  transform: translateY(-250%);
+  li:last-child a {
+    background-color: var(--Yellow);
+    color: var(--Very-Dark-Desaturated-Blue);
+    margin: 1rem auto;
+    font-family: var(--Font-Family-Fraunces);
+    padding: 1rem 2rem;
+    max-width: fit-content;
+    text-transform: uppercase;
+    font-weight: var(--Font-Weight-900F);
+    border-radius: 2rem;
+  }
+
+  .header__link {
+    padding: 1rem;
+    color: var(--Dark-Grayish-Blue);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    transition: 1s;
+    right: 0;
+    top: 0;
+    transform: translateY(-98%);
+    border-left: 1.75rem solid transparent;
+    border-bottom: 1.75rem solid var(--White);
+  }
+}
+.header__navbar {
+  transform: translate(0) !important;
+}
+@media only screen and (min-width: 600px) {
+  .header__hamburger {
+    display: none;
+  }
+  header {
+    background-image: url(../images/desktop/image-header.jpg);
+  }
+  .header__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .header__link {
+    color: var(--White) !important;
+  }
+  nav {
+    display: flex;
+    width: 100%;
+    left: 0;
+    top: 0;
+    &::after {
+      display: none;
+    }
+    position: relative;
+    transform: translate(0);
+    background-color: transparent;
+    padding: 0;
+    li:last-child a {
+      margin: 0;
+      background-color: var(--White);
+      color: var(--Very-Dark-Desaturated-Blue) !important;
+      &:hover {
+        background-color: hsla(0, 0%, 100%, 0.2);
+        color: var(--White) !important;
+      }
+    }
+  }
+  .header__links {
+    display: flex;
+    margin-left: auto;
+  }
+  .header__title {
+    margin-top: -15rem;
+  }
+}

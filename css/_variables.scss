@@ -1,0 +1,47 @@
+:root {
+  --Soft-Red: hsl(7, 99%, 70%);
+  --Yellow: hsl(51, 100%, 49%);
+  --Dark-Desaturated-Cyan: hsl(167, 40%, 24%); //(graphic design text)
+  --Dark-Blue: hsl(198, 62%, 26%); // (photography text)
+  --Dark-Moderate-Cyan: hsl(168, 34%, 41%); //(footer)
+
+  --Very-Dark-Desaturated-Blue: hsl(212, 27%, 19%);
+  --Very-Dark-Grayish-Blue: hsl(213, 9%, 39%);
+  --Dark-Grayish-Blue: hsl(232, 10%, 55%);
+  --Grayish-Blue: hsl(210, 4%, 67%);
+  --White: hsl(0, 0%, 100%);
+
+  --Font-Family-Barlow: "Barlow", sans-serif;
+  --Font-Family-Fraunces: "Fraunces", serif;
+
+  --Font-Weight-600B: 600;
+  --Font-Weight-700F: 700;
+  --Font-Weight-900F: 900;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--Font-Family-Barlow);
+  font-weight: var(--Font-Weight-600B);
+}
+body {
+  min-width: 375px;
+  max-width: 1800px;
+}
+img {
+  display: block;
+}
+a {
+  text-decoration: none;
+  display: block;
+}
+ul {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--Font-Family-Fraunces);
+}
